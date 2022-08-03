@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>The script element</h1>
+
+<div id="container">
+
+<p id="demo"></p>
+
+<script>
+navigator.serviceWorker.register('/serviceWorker.js')
+.then(reg => console.log('SW registered!', reg))
+    .catch(err => console.log('Boo!', err));;
+
+function magenishFetch(){
+	var sc = document.createElement('script');
+	sc.src = 'EwaDS.js';
+	sc.type = 'text/javascript';
+	sc.charset = "utf-8";
+	// if(typeof sc['async'] !== 'undefined') {
+	// 		sc.async = true;
+	// }  
+	document.getElementsByTagName('head')[0].appendChild(sc);
+}
+
+
+</script>
+
+<button onclick="magenishFetch()">Click me</button>
+
+<!-- <script src="EwaDS.js"></script> -->
+
+</body>
+</html>
+
+
+
+
+
